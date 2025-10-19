@@ -15,7 +15,6 @@ Play WebP in Swift.
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Contribution](#contribution)
-- [Stats](#stats)
 
 ## System requirements
 
@@ -25,7 +24,7 @@ Play WebP in Swift.
 
 ## Installation
 
-### Swift Package Manager (Recommended)
+### Swift Package Manager
 
 #### Package
 
