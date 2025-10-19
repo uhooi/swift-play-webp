@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - Examples/**
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - Examples/**
+
+jobs:
+  run-macos:
+    name: ${{ matrix.subcommand }} with Xcode ${{ matrix.xcode }} on macOS
+    runs-on: macos-26
+    strategy:
+      matrix:
+        xcode: ["26.0"]
+        subcommand: ["Build", "Test"]
+    steps:
+    - uses: actions/checkout@v5
+    - name: Show versions
+      run: |
+        xcodebuild -version
+        swift --version
+        swift package --version
+    - name: ${{ matrix.subcommand }}
+      run: |
+        subcommand=`echo ${{ matrix.subcommand }} | tr '[:upper:]' '[:lower:]'`
+        swift $subcommand -v
+      env:
+        DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode }}.app
+
+  run-ubuntu:
+    name: ${{ matrix.subcommand }} with Xcode ${{ matrix.swift }} on Ubuntu
+    runs-on: ubuntu-latest
+    container: swift:${{ matrix.swift }}
+    strategy:
+      matrix:
+        swift: ["6.2"]
+        subcommand: ["Build", "Test"]
+    steps:
+    - uses: actions/checkout@v5
+    - name: Show versions
+      run: |
+        swift --version
+        swift package --version
+    - name: ${{ matrix.subcommand }}
+      run: |
+        subcommand=`echo ${{ matrix.subcommand }} | tr '[:upper:]' '[:lower:]'`
+        swift $subcommand -v
