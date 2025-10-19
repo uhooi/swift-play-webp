@@ -1,6 +1,6 @@
 # swift-play-webp
 
-[![CI](https://github.com/uhooi/swift-play-webp/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/uhooi/swift-play-webp/actions/workflows/main.yml)
+[![CI](https://github.com/uhooi/swift-play-webp/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/uhooi/swift-play-webp/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/uhooi/swift-play-webp)](https://github.com/uhooi/swift-play-webp/releases/latest)
 [![Swift Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fuhooi%2Fswift-swift-play-webp%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/uhooi/swift-play-webp)
 [![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fuhooi%2Fswift-play-webp%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/uhooi/swift-play-webp)
